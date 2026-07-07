@@ -1,11 +1,41 @@
 export interface Service {
   id: string;
   title: string;
-  icon: string; // Lucide icon name
+  icon: string;
   description: string;
   longDescription: string;
   benefits: string[];
   deliverables: string[];
+}
+
+export interface ServiceProps {
+  activeService: Service;
+  activeServiceId: string;
+  setActiveServiceId: (id: string) => void;
+  onNavigate: (page: string, subId?: string) => void;
+  handleQuoteSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  formSubmitted: boolean;
+}
+
+export interface ServiceSidebarProps {
+  activeServiceId: string;
+  setActiveServiceId: (id: string) => void;
+  onNavigate: (page: string, subId?: string) => void;
+}
+
+export interface ServicesGridProps {
+  activeServiceId: string;
+  setActiveServiceId: (id: string) => void;
+}
+
+export interface QuoteFormProps {
+  activeService: Service;
+  handleQuoteSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  formSubmitted: boolean;
+}
+
+export interface BenefitsListProps {
+  activeService: Service;
 }
 
 export interface ProjectTimelineEvent {
@@ -34,6 +64,27 @@ export interface Project {
   beforeImage: string;
   afterImage: string;
   gallery: string[];
+}
+
+export type ProjectTab = 'All' | 'Completed' | 'In Progress' | 'Planning';
+
+export interface ProjectFiltersProps {
+  activeTab: ProjectTab;
+  setActiveTab: (tab: ProjectTab) => void;
+}
+
+export interface ProjectGridProps {
+  projects: Project[];
+  setActiveProjectId: (id: string) => void;
+}
+
+export interface ProjectDetailProps {
+  project: Project;
+  onBack: () => void;
+}
+
+export interface ProjectProp{
+  project: Project;
 }
 
 export interface Property {

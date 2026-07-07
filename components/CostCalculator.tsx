@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, FormEvent } from 'react';
 import { Calculator, ArrowRight, Building, DollarSign, Hammer, Check, Info, FileText } from 'lucide-react';
 
