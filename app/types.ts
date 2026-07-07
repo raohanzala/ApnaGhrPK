@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface Service {
   id: string;
   title: string;
@@ -75,7 +77,7 @@ export interface ProjectFiltersProps {
 
 export interface ProjectGridProps {
   projects: Project[];
-  setActiveProjectId: (id: string) => void;
+  setActiveProjectId: Dispatch<SetStateAction<string | null>>;
 }
 
 export interface ProjectDetailProps {
@@ -85,6 +87,11 @@ export interface ProjectDetailProps {
 
 export interface ProjectProp{
   project: Project;
+}
+
+export interface ProjectCardProps{
+  project: Project;
+  setActiveProjectId: Dispatch<SetStateAction<string | null>>
 }
 
 export interface Property {
