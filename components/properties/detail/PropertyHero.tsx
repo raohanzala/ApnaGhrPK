@@ -1,13 +1,13 @@
-import { ProjectDetailProps } from '@/app/types'
+import { PropertyHeroProps } from '@/app/types'
 import { ChevronLeft, MapPin } from 'lucide-react'
 
-export default function ProjectHero({project, onBack}: ProjectDetailProps) {
+export default function PropertyHero({ property, onBack }: PropertyHeroProps) {
     return (
         <section className="bg-[#111111] text-[#F8F7F4] py-16 relative overflow-hidden border-b border-[#B8892D]/20">
             <div className="absolute inset-0 z-0 opacity-20">
                 <img
-                    src={project.droneImage || project.image}
-                    alt={project.title}
+                    src={property.droneImage || property.image}
+                    alt={property.title}
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                 />
@@ -21,13 +21,13 @@ export default function ProjectHero({project, onBack}: ProjectDetailProps) {
                 </button>
                 <div className="space-y-2">
                     <span className="text-xs font-mono uppercase tracking-widest text-[#B8892D] bg-[#B8892D]/10 border border-[#B8892D]/30 px-3 py-1 rounded">
-                        {project.type}
+                        For Sale • Ready Possession
                     </span>
                     <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight">
-                        {project.title}
+                        {property.title}
                     </h1>
-                    <p className="text-sm font-mono text-slate-300 flex items-center gap-1.5">
-                        <MapPin className="w-4 h-4 text-[#B8892D]" /> {project.location}
+                    <p className="text-xs font-mono text-slate-300 flex items-center gap-1.5">
+                        <MapPin className="w-4 h-4 text-[#B8892D]" /> {property.location}
                     </p>
                 </div>
             </div>
