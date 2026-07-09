@@ -173,7 +173,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <button
-              onClick={() => router.push('/contact')}
+              onClick={() => router.push('/consultation')}
               className="bg-[#B8892D] hover:bg-[#C99A3C] text-white px-5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider shadow-sm hover:shadow transition-all duration-200 flex items-center gap-2 group cursor-pointer border border-[#B8892D]"
             >
               Book Consultation

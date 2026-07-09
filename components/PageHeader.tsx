@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface PageHeaderProps {
-    subTitle: string;
+    subTitle?: string;
     title: string;
     description: string;
 }

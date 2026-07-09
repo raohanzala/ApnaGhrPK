@@ -485,7 +485,7 @@ export default function OtherSubPages({ pageName, subId, onNavigate }: OtherPage
     );
   }
 
-  if (pageName === 'book-consultation') {
+  if (pageName === 'consultation') {
     return (
       <div className="bg-[#F8F7F4] min-h-screen text-[#1F2937] pb-24 font-sans">
         <section className="bg-[#111111] text-[#F8F7F4] py-16 text-center border-b border-[#B8892D]/20">

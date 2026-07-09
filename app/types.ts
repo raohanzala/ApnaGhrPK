@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, FormEvent, SetStateAction } from "react";
 
 export interface Service {
   id: string;
@@ -317,3 +317,163 @@ export interface Career {
   description: string;
   requirements: string[];
 }
+
+export interface FAQsSectionProps{
+  activeFaqId: string | null;
+  setActiveFaqId: Dispatch<SetStateAction<string | null>>;
+}
+
+export interface ContactHeroProps {
+  title: string;
+  description: string;
+}
+
+export interface ContactLayoutProps {
+  children: React.ReactNode;
+}
+
+export interface Office {
+  id: string;
+  title: string;
+  address: string;
+  tag: string;
+}
+
+export interface OfficeCardProps {
+  office: Office;
+}
+
+export interface OfficeLocationsProps {
+  offices: Office[];
+}
+
+export interface HelpdeskCardProps {
+  mobile: string;
+  whatsapp: string;
+  workingHours: string;
+}
+
+export interface SuccessAlertProps {
+  message: string;
+}
+
+export interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+export interface FAQSectionProps {
+  faqs: FAQ[];
+
+  activeFaqId: string | null;
+
+  setActiveFaqId: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
+}
+
+export interface FAQItemProps {
+  faq: FAQ;
+
+  isOpen: boolean;
+
+  onToggle: () => void;
+}
+
+export interface FormProps {
+  submitting: boolean;
+
+  successMsg: string;
+
+  handleFormSubmit: (
+    e: FormEvent<HTMLFormElement>,
+    formType: string
+  ) => void;
+}
+
+export interface DeliverableNoticeProps {
+  title: string;
+  description: string;
+}
+
+export interface BlogListingPageProps {
+  articles: Article[];
+
+  setActiveBlogId: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
+}
+
+export interface BlogGridProps {
+  articles: Article[];
+
+  setActiveBlogId: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
+}
+
+export interface BlogCardProps {
+  article: Article;
+
+  setActiveBlogId: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
+}
+
+export interface BlogDetailPageProps {
+  article: Article;
+
+  onBack: () => void;
+}
+
+export interface BackButtonProps {
+  onBack: () => void;
+
+  label: string;
+}
+
+export interface BlogMetaProps {
+  category: string;
+
+  date: string;
+
+  readTime: string;
+
+  author?: string;
+}
+
+export interface ArticleContentProps {
+  content: string;
+}
+
+export interface ParagraphRendererProps {
+  paragraph: string;
+}
+
+export interface TagListProps {
+  tags: string[];
+}
+
+export interface Article {
+  id: string;
+
+  title: string;
+
+  image: string;
+
+  category: "Construction Tips" | "Design Ideas" | "Material Guides" | "Budget Planning";
+
+  excerpt: string;
+
+  content: string;
+
+  author: string;
+
+  date: string;
+
+  readTime: string;
+
+  tags: string[];
+}
+
